@@ -115,7 +115,7 @@
                 return (jQueryObject && jQueryObject.data) ? jQueryObject.data(key) : defaults;
             },
             defaults: function (configuration) {
-                return jQuery.extend(true, defaults, configuration);;
+                return jQuery.extend(true, defaults, configuration);
             },
             keyMap: function (new_keyMap) {
                 return jQuery.extend(keyMap, new_keyMap);
@@ -124,9 +124,9 @@
                 var handlers = this.configuration(jQueryObject).handlers[keyupdown],
                     handler;
 
-                for(handler in handlers) {
-                    if(handler === combination) {
-                        handlers[handler] = undefined;
+                for (handler in handlers) {
+                    if (handler === combination) {
+                        delete handlers[handler];
                     }
                 }
             }
